@@ -38,9 +38,6 @@ function sendmail($recipient, $message='', $subject='', $alt_message='', $cc=arr
     $mail->Body    = $message;
     $mail->AltBody = $alt_message;
 
-    if(!$mail->send())
-        return true;
-    else
-        return false;
+    return $mail->send();
 }
 ?>
